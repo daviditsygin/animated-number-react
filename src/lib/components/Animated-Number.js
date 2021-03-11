@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import anime from './anime';
+var BigNumber = require('bignumber.js');
 
 const defaultFunction = () => {};
 
@@ -73,7 +74,7 @@ class AnimatedNumber extends Component {
   render() {
     return (
       <span className={this.props.className}>
-        {this.props.formatValue(Number(this.state.animatedValue))}
+        {this.props.formatValue(BigNumber(this.state.animatedValue))}
       </span>
     );
   }
